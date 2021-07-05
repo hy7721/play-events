@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HOT SUMMER EVENT</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- javascript -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/jquery.easing.min.js"></script>
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="section_visual">
+      <div class="section_header">
+        <div class="inner_header">
+          <h1 class="tit_logo">
+            <a href="javascript:closeWin();" class="link_logo">
+              <img src="./images/img_logo.png" class="img_content" alt="ROHAN">
+            </a>
+          </h1>
+          <nav class="section_nav">
+            <ul class="list_nav">
+              <li><a href="#sectionEvent01" class="link_nav"><span class="sr_only">여름바다 아이템 수집작전</span></a></li>
+              <li><a href="#sectionEvent02" class="link_nav"><span class="sr_only">강화의 신</span></a></li>
+              <li><a href="#sectionEvent03" class="link_nav"><span class="sr_only">문양 및 부가서비스 할인</span></a></li>
+            </ul>
+          </nav>
+          <ul class="list_util">
+            <li><a href="#none" class="ico_comm ico_home link_util"></a></li>
+            <li><a href="#none" class="ico_comm ico_close link_util"></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wrap_visual">
+        <img src="./images/img_visual_01.png" alt="">
+        <img src="./images/img_visual_02.png" alt="">
+      </div>
+    </div>
+
+    <main class="section_event">
+      <div id="sectionEvent01" class="wrap_event section_event_01">
+        <h3><span class="sr_only">EVENT 1. 여름바다 아이템 수집작전</span></h3>
+        <strong class="sr_only">이벤트 기간 동안 '조개껍질'과 소라껍질'을 모아, 특별한 선물로 교환하세요!</strong>  
+        <div class="inner_event">
+          <img src="./images/event_cont_01.png" class="img_content" alt="">
+          <div class="sr_only">
+            <h4>참여방법</h4>
+            <ol>
+              <li>STEP 1. 조개껍질 및 소라껍질 획득 미션 수행</li>
+              <li>STEP 2. 매일 수행한 미션에 따라 조개껍질 및 소라껍질 획득</li>
+              <li>STEP 3. 조개껍질 및 소라껍질로 교환상점을 통해 아이템 교환</li>
+            </ol>  
+            <h4>획득미션</h4>
+            <strong>조개껍질 획득 미션</strong>
+            <ul>
+              <li><span>로한 홈페이지 접속</span><span>조개껍질 1개 획득</span></li>
+              <li><span>엘레멘탈 던전 입장</span><span>조개껍질 2개 획득</span></li>
+              <li><span>로한 3시간 이상 플레이</span><span>조개껍질 3개 획득</span></li>
+            </ul>
+            <strong class="sr_only">소라껍질 획득 미션</strong>
+            <ul class="sr_only">
+              <li><span>에쉬키나 던전 입장</span><span>소라껍질 2개 획득</span></li>
+              <li><span>힘의 전장 입장</span><span>소라껍질 2개 획득</span></li>
+              <li><span>PC방에서 3시간 이상 플레이</span><span>소라껍질 2개 획득</span></li>
+            </ul>
+          </div>
+          <!-- 교환 이벤트 영역 -->
+          <h4><span class="sr_only">교환상품</span></h4>
+          <div class="wrap_exch">
+            <div class="cont_exch">
+              <div class="tit_exch">
+                <!-- 조개껍질 갯수 -->
+                <p class="txt_exch"><span class="sr_only">조개껍질:</span>00000<span class="sr_only">개</span></p>
+                <button class="btn_refresh" type="button"><span class="sr_only">새로고침</span></button>
+              </div>
+              <!-- 교환하기 활성화 > 마우스오버시, link_exch에 on 클래스 추가 -->
+              <!-- 교환완료 > link_exch에 off 클래스 추가 -->
+              <ul class="list_exch">
+                <li>
+                  <span class="sr_only">천상의 눈물&times;10</span>
+                  <span class="sr_only">조개껍질 1개 교환</span>
+                  <a href="#none" class="link_exch on"><span class="sr_only">교환하기</span></a>
+                </li>
+                <li>
+                  <span class="sr_only">엘레멘탈 속성의 주문서&times;5</span>
+                  <span class="sr_only">조개껍질 10개 교환</span>
+                  <a href="#none" class="link_exch off"></a>
+                </li>
+                <li>
+                  <span class="sr_only">재도전의 주문서&times;2</span>
+                  <span class="sr_only">조개껍질 20개 교환</span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+                <li>
+                  <span class="sr_only">바다의 유물&lpar;T타입&rpar;&lpar;3일&rpar;&times;1</span>
+                  <span class="sr_only">조개껍질 30개 교환</span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+                <li>
+                  <span class="sr_only">용사의 강화석&times;2100</span>
+                  <span class="sr_only">조개껍질 50개 교환</span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+                <li>
+                  <span class="sr_only">에이션트 스킬 강화석&lpar;100&percnt;&rpar;&lpar;이벤트&rpar;&times;1</span>
+                  <span class="sr_only">조개껍질 100개 교환</span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+              </ul>
+            </div>
+            <div class="cont_exch">
+              <div class="tit_exch">
+                <!-- 소라껍질 갯수 -->
+                <p class="txt_exch"><span class="sr_only">소라껍질:</span>0000<span class="sr_only">개</span></p>
+                <!-- 새로고침 -->
+                <button class="btn_refresh" type="button"><span class="sr_only">새로고침</span></button>
+              </div>
+              <ul class="list_exch">
+                <li>
+                  <span class="sr_only"></span>
+                  <span class="sr_only"></span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+                <li>
+                  <span class="sr_only"></span>
+                  <span class="sr_only"></span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+                <li>
+                  <span class="sr_only"></span>
+                  <span class="sr_only"></span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+                <li>
+                  <span class="sr_only"></span>
+                  <span class="sr_only"></span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+                <li>
+                  <span class="sr_only"></span>
+                  <span class="sr_only"></span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+                <li>
+                  <span class="sr_only"></span>
+                  <span class="sr_only"></span>
+                  <a href="#none" class="link_exch"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- // 교환 이벤트 영역 -->
+          <strong class="sr_only">주의 사항</strong>
+          <ul class="sr_only">
+            <li>- 교환상점 아이템들은 계정당 1회만 교환이 가능하며, 모든 아이템들은 거래가 불가능합니다.</li>
+            <li>- 조개껍질 및 소라껍질로 아이템을 교환 한 경우, 취소가 불가능 합니다.</li>
+            <li>- 당일 23:59분까지 달성하신 미션에 대한 조개껍질과 소라껍질은 다음날 03:00에 지급됩니다.</li>
+            <li>- 미션 진행 후 획득한 조개껍질과 소라껍질은 로그인 후 새로고침하여 확인하실 수 있습니다.</li>
+            <li>- 동일한 미션은 1일 1회만 체크됩니다. (ex. 재도전 주문서로 던전을 재입장 하여도 추가 지급 없음)</li>
+            <li>- 교환하신 아이템은 게임 내 [몰인벤토리]로 지급됩니다.</li>
+            <li>- 2021년 8월 10일 23:59분 이후에 달성하는 미션에는 조개껍질과 소라껍질이 지급되지 않습니다.</li>
+            <li>- 이벤트 종료 시 획득하신 조개껍질과 소라껍질은 모두 소멸됩니다.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="sectionEvent02" class="wrap_event section_event_02">
+        <div class="wrap_visual">
+          <img src="./images/img_visual_03.png" alt="">
+          <img src="./images/img_visual_04.png" alt="">
+        </div>
+
+        <div class="inner_event">
+          <img src="./images/event_cont_02.png" class="img_content" alt="">
+
+
+
+
+          <div class="sr_only">
+            <h3>EVENT 2. 강화의 신</h3>
+            <strong>'강화의 징표'를 강화하고 다양한 아이템으로 교환하세요.</strong>
+            <h4>이벤트 아이템</h4>
+            <strong>이벤트 아이템은 NPC프랑코에게서 상점에서 구매하실 수 있습니다.</strong> 
+          </div>
+        </div>
+      </div>
+
+      <div id="sectionEvent03" class="wrap_event section_event_03">
+        <div class="inner_event">
+          <img src="./images/event_cont_03.png" class="img_content" alt="">
+          <a href="#none" target="_blank" class="btn_purchase"></a>
+          <a href="#none" target="_blank" class="btn_additional"></a>
+          <div class="wrap_sale">
+            <img src="./images/img_sale.png" class="img_content" alt="">
+          </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- section_aside -->
+  <a href="#wrapper" class="btn_top" onclick="scrollToTop(); return false"><img src="./images/btn_top.png" alt="TOP"></a>
+  <!-- // section_aside -->
+
+  <footer class="section_footer">
+    <div class="inner_footer">
+      <h2><span class="sr_only">푸터 영역</span></h2>
+      <img src="./images/img_copyright.png" class="img_copyright" alt="&copy; PLAYWITH GAMES Inc. All Rights Reserved.">  
+    </div>
+  </footer>
+</body>
+
+</html>
