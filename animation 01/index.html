@@ -15,9 +15,10 @@
   <script src="./js/jquery.easing.min.js"></script>
   <script src="./js/main.js"></script>
 </head>
-
 <body>
+  <!-- #wrapper -->
   <div id="wrapper">
+    <!-- .section_visual -->
     <div class="section_visual">
       <div class="section_header">
         <div class="inner_header">
@@ -27,26 +28,30 @@
             </a>
           </h1>
           <nav class="section_nav">
-            <ul class="list_nav">
-              <li><a href="#sectionEvent01" class="link_nav"><span class="sr_only">여름바다 아이템 수집작전</span></a></li>
-              <li><a href="#sectionEvent02" class="link_nav"><span class="sr_only">강화의 신</span></a></li>
-              <li><a href="#sectionEvent03" class="link_nav"><span class="sr_only">문양 및 부가서비스 할인</span></a></li>
-            </ul>
+            <div class="list_nav">
+              <a href="#sectionEvent01" class="link_nav"><span class="sr_only">여름바다 아이템 수집작전</span></a>
+              <a href="#sectionEvent02" class="link_nav"><span class="sr_only">강화의 신</span></a>
+              <a href="#sectionEvent03" class="link_nav"><span class="sr_only">문양 및 부가서비스 할인</span></a>
+            </div>
           </nav>
           <ul class="list_util">
-            <li><a href="#none" class="ico_comm ico_home link_util"></a></li>
-            <li><a href="#none" class="ico_comm ico_close link_util"></a></li>
+            <li><a href="javascript:closeWin();" class="ico_comm ico_home link_util"><span class="sr_only">홈으로</span></a></li>
+            <li><a href="javascript:closeWin2();" class="ico_comm ico_close link_util"><span class="sr_only">닫기</span></a></li>
           </ul>
         </div>
       </div>
-
       <div class="wrap_visual">
-        <img src="./images/img_visual_01.png" alt="">
-        <img src="./images/img_visual_02.png" alt="">
+        <img src="./images/img_visual_01.png" class="item_animation_01" alt="">
+        <img src="./images/img_visual_02.png" class="item_animation_02" alt="">
+        <h2><span class="sr_only">HOT SUMMER EVENT</span></h2>
+        <h3><span class="sr_only">7월 14일(수) 점검 후 ~ 8월 11일(수) 점검 전</span></h3>
       </div>
     </div>
+    <!-- // .section_visual -->
 
+    <!-- .section_event -->
     <main class="section_event">
+      <h2><span class="sr_only">메인 이벤트 영역</span></h2>
       <div id="sectionEvent01" class="wrap_event section_event_01">
         <h3><span class="sr_only">EVENT 1. 여름바다 아이템 수집작전</span></h3>
         <strong class="sr_only">이벤트 기간 동안 '조개껍질'과 소라껍질'을 모아, 특별한 선물로 교환하세요!</strong>  
@@ -73,6 +78,7 @@
               <li><span>PC방에서 3시간 이상 플레이</span><span>소라껍질 2개 획득</span></li>
             </ul>
           </div>
+
           <!-- 교환 이벤트 영역 -->
           <h4><span class="sr_only">교환상품</span></h4>
           <div class="wrap_exch">
@@ -159,6 +165,7 @@
             </div>
           </div>
           <!-- // 교환 이벤트 영역 -->
+
           <strong class="sr_only">주의 사항</strong>
           <ul class="sr_only">
             <li>- 교환상점 아이템들은 계정당 1회만 교환이 가능하며, 모든 아이템들은 거래가 불가능합니다.</li>
@@ -172,50 +179,56 @@
           </ul>
         </div>
       </div>
-
       <div id="sectionEvent02" class="wrap_event section_event_02">
-        <div class="wrap_visual">
-          <img src="./images/img_visual_03.png" alt="">
-          <img src="./images/img_visual_04.png" alt="">
-        </div>
-
         <div class="inner_event">
           <img src="./images/event_cont_02.png" class="img_content" alt="">
-
-
-
-
           <div class="sr_only">
             <h3>EVENT 2. 강화의 신</h3>
             <strong>'강화의 징표'를 강화하고 다양한 아이템으로 교환하세요.</strong>
             <h4>이벤트 아이템</h4>
             <strong>이벤트 아이템은 NPC프랑코에게서 상점에서 구매하실 수 있습니다.</strong> 
+            <h4>'강화의 징표' 강화</h4>
+            <strong>강화 시도는 NPC 마르셰를 통해 진행하실 수 있습니다.</strong>
+            <h4>'강화의 징표 &plus; 10' 교환 아이템</h4>
+            <strong>본 퀘스트는 NPC 트렌드를 통해 진행하실 수 있습니다.</strong>
           </div>
         </div>
+        <div class="wrap_animation_01">
+          <img src="./images/img_visual_03.png" class="item_animation_03" alt="">
+          <img src="./images/img_visual_04.png" class="item_animation_04" alt="">
+          <img src="./images/img_visual_06.png" class="item_animation_06" alt="">
+        </div>
+        <div class="wrap_animation_02">
+          <img src="./images/img_visual_07.png" class="item_animation_07" alt="">
+          <img src="./images/img_visual_08.png" class="item_animation_08" alt="">
+          <img src="./images/img_visual_09.png" class="item_animation_09" alt="">
+        </div>
       </div>
-
       <div id="sectionEvent03" class="wrap_event section_event_03">
         <div class="inner_event">
           <img src="./images/event_cont_03.png" class="img_content" alt="">
-          <a href="#none" target="_blank" class="btn_purchase"></a>
-          <a href="#none" target="_blank" class="btn_additional"></a>
-          <div class="wrap_sale">
-            <img src="./images/img_sale.png" class="img_content" alt="">
+          <a href="https://secure.rohan.co.kr/Shop/Mall/main.html?cType=0&searchText=문양" target="_blank" class="btn_purchase"><span class="sr_only">구매하기</span></a>
+          <a href="https://secure.rohan.co.kr/payment/append_01.html" target="_blank" class="btn_additional"><span class="sr_only">부가서비스 이용하기</span></a>
+          <div class="wrap_animation_03">
+            <img src="./images/img_sale.png" class="item_animation_10" alt="30% 세일">
           </div>
+        </div>
       </div>
     </main>
+    <!-- // .section_event -->
+
+    <!-- .section_aside -->
+    <a href="#wrapper" class="btn_top" onclick="scrollToTop(); return false"><img src="./images/btn_top.png" alt="페이지 맨 위로 이동"></a>
+    <!-- // .section_aside -->
+
+    <!-- .section_footer -->
+    <footer class="section_footer">
+      <div class="inner_footer">
+        <h2><span class="sr_only">페이지 푸터 영역</span></h2>
+        <img src="./images/img_copyright.png" class="img_copyright" alt="&copy; PLAYWITH GAMES Inc. All Rights Reserved.">  
+      </div>
+    </footer>
+    <!-- // .section_footer -->
   </div>
-
-  <!-- section_aside -->
-  <a href="#wrapper" class="btn_top" onclick="scrollToTop(); return false"><img src="./images/btn_top.png" alt="TOP"></a>
-  <!-- // section_aside -->
-
-  <footer class="section_footer">
-    <div class="inner_footer">
-      <h2><span class="sr_only">푸터 영역</span></h2>
-      <img src="./images/img_copyright.png" class="img_copyright" alt="&copy; PLAYWITH GAMES Inc. All Rights Reserved.">  
-    </div>
-  </footer>
 </body>
-
 </html>

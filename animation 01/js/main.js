@@ -4,32 +4,32 @@ function _classCallCheck(t, i) {
 }
 var Sticky = function() {
   function t() {
-      var i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-          e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      _classCallCheck(this, t), this.selector = i, this.elements = [], this.version = "1.2.0", this.vp = this.getViewportSize(), this.body = document.querySelector("body"), this.options = {
-          wrap: e.wrap || !1,
-          marginTop: e.marginTop || 0,
-          stickyFor: e.stickyFor || 0,
-          stickyClass: e.stickyClass || null,
-          stickyContainer: e.stickyContainer || "body"
-      }, this.updateScrollTopPosition = this.updateScrollTopPosition.bind(this), this.updateScrollTopPosition(), window.addEventListener("load", this.updateScrollTopPosition), window.addEventListener("scroll", this.updateScrollTopPosition), this.run()
+    var i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+        e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    _classCallCheck(this, t), this.selector = i, this.elements = [], this.version = "1.2.0", this.vp = this.getViewportSize(), this.body = document.querySelector("body"), this.options = {
+        wrap: e.wrap || !1,
+        marginTop: e.marginTop || 0,
+        stickyFor: e.stickyFor || 0,
+        stickyClass: e.stickyClass || null,
+        stickyContainer: e.stickyContainer || "body"
+    }, this.updateScrollTopPosition = this.updateScrollTopPosition.bind(this), this.updateScrollTopPosition(), window.addEventListener("load", this.updateScrollTopPosition), window.addEventListener("scroll", this.updateScrollTopPosition), this.run()
   }
   return t.prototype.run = function() {
-      var t = this,
-          i = setInterval(function() {
-              if ("complete" === document.readyState) {
-                  clearInterval(i);
-                  var e = document.querySelectorAll(t.selector);
-                  t.forEach(e, function(i) {
-                      return t.renderElement(i)
-                  })
-              }
-          }, 10)
+    var t = this,
+        i = setInterval(function() {
+            if ("complete" === document.readyState) {
+              clearInterval(i);
+              var e = document.querySelectorAll(t.selector);
+              t.forEach(e, function(i) {
+                  return t.renderElement(i)
+              })
+            }
+        }, 10)
   }, t.prototype.renderElement = function(t) {
-      var i = this;
-      t.sticky = {}, t.sticky.active = !1, t.sticky.marginTop = parseInt(t.getAttribute("data-margin-top")) || this.options.marginTop, t.sticky.stickyFor = parseInt(t.getAttribute("data-sticky-for")) || this.options.stickyFor, t.sticky.stickyClass = t.getAttribute("data-sticky-class") || this.options.stickyClass, t.sticky.wrap = !!t.hasAttribute("data-sticky-wrap") || this.options.wrap, t.sticky.stickyContainer = this.options.stickyContainer, t.sticky.container = this.getStickyContainer(t), t.sticky.container.rect = this.getRectangle(t.sticky.container), t.sticky.rect = this.getRectangle(t), "img" === t.tagName.toLowerCase() && (t.onload = function() {
-          return t.sticky.rect = i.getRectangle(t)
-      }), t.sticky.wrap && this.wrapElement(t), this.activate(t)
+    var i = this;
+    t.sticky = {}, t.sticky.active = !1, t.sticky.marginTop = parseInt(t.getAttribute("data-margin-top")) || this.options.marginTop, t.sticky.stickyFor = parseInt(t.getAttribute("data-sticky-for")) || this.options.stickyFor, t.sticky.stickyClass = t.getAttribute("data-sticky-class") || this.options.stickyClass, t.sticky.wrap = !!t.hasAttribute("data-sticky-wrap") || this.options.wrap, t.sticky.stickyContainer = this.options.stickyContainer, t.sticky.container = this.getStickyContainer(t), t.sticky.container.rect = this.getRectangle(t.sticky.container), t.sticky.rect = this.getRectangle(t), "img" === t.tagName.toLowerCase() && (t.onload = function() {
+        return t.sticky.rect = i.getRectangle(t)
+    }), t.sticky.wrap && this.wrapElement(t), this.activate(t)
   }, t.prototype.wrapElement = function(t) {
       t.insertAdjacentHTML("beforebegin", "<div></div>"), t.previousSibling.appendChild(t)
   }, t.prototype.activate = function(t) {
@@ -186,7 +186,7 @@ let $rohan = jQuery.noConflict();  // preventing jQuery conflict
         heights = initial_value[0],
         height_navigation = initial_value[1],
         anchors = initial_value[2], 
-        section_01, section_02, section_03, section_04;
+        section_01, section_02, section_03;
 
     section_01 = heights[0] - height_navigation;
     section_02 = heights[1] - height_navigation;
@@ -205,7 +205,7 @@ let $rohan = jQuery.noConflict();  // preventing jQuery conflict
 
   // initial value
   let promo_content = '[id^=sectionEvent]',
-      navigator = 'nav';
+      navigator = 'nav > .list_nav';
 
   $(document).ready(function(e) {
     // animate scroll
