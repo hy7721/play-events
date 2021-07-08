@@ -138,7 +138,7 @@ var Sticky = function() {
 // rohan
 let $rohan = jQuery.noConflict();  // preventing jQuery conflict
 
-!function($,undefined){
+!function($, undefined){
   // animate scroll for sticky
   let animateScroll = function(ele){
     let $navigation = $(ele),
@@ -232,6 +232,8 @@ let $rohan = jQuery.noConflict();  // preventing jQuery conflict
   });
   
 }($rohan);
+
+
 
 // btn_top smooth scroll
 function scrollToTop() {

@@ -1,4 +1,4 @@
-/* ----- reset css ----- */
+/* ---------- reset css ---------- */
 
 * {
   margin: 0;
@@ -81,7 +81,7 @@ a:link, a:visited {
 
 
 
-/* ----- common css ----- */
+/* ---------- common css ---------- */
 
 .sr_only {
   position: absolute;
@@ -125,7 +125,7 @@ img.img_content {
 
 
 
-/* ----- style css ----- */
+/* ---------- style css ---------- */
 
 #wrapper {
   overflow: hidden;
@@ -135,6 +135,10 @@ img.img_content {
   min-width: 1600px;
   margin: 0 auto;
 }
+
+
+
+/* ----- visual, header ----- */
 
 .section_visual {
   height: 1246px;
@@ -218,9 +222,11 @@ img.img_content {
 .section_nav {
   overflow: hidden;
   display: flex;
+  width: 100%;
   max-width: 1200px;
   height: 105px;
-  margin-left: -24px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 .list_nav {
@@ -232,6 +238,7 @@ img.img_content {
 .link_nav {
   display: flex;
   height: 105px;
+  margin-left: 12.6666%;
 }
 
 .list_nav > .link_nav:nth-child(1) {
@@ -263,9 +270,9 @@ img.img_content {
   background-position: 0 -115px;
 }
 
-.link_nav + .link_nav {
-  margin-left: 152px;
-}
+
+
+/* --- visual section 애니메이션 영역 --- */
 
 .wrap_visual {
   position: relative;
@@ -277,15 +284,16 @@ img.img_content {
   -webkit-box-sizing: border-box;
 }
 
+/* HOT SUMMER EVENT 애니메이션 */
 .item_animation_01 {
   position: absolute;
   width: 888px;
   height: 510px;
   left: 0;
   top: 262px;
-  animation: visual1 0.4s ease-out backwards;
-  -webkit-animation: visual1 0.4s ease-out backwards;
-}/* HOT SUMMER EVENT 애니메이션 */
+  animation: visual1 0.8s ease-out backwards;
+  -webkit-animation: visual1 0.8s ease-out backwards;
+}
 
 @keyframes visual1 {
   0% { transform: scale(1.8);
@@ -296,23 +304,24 @@ img.img_content {
     opacity: 1; }
 }
 @-webkit-keyframes visual1 {
-  0% { transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    opacity: 1; }
-  100% { transform: scale(0.8);
-    -webkit-transform: scale(0.8);
+  0% { transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    opacity: 0.5; }
+  100% { transform: scale(1);
+    -webkit-transform: scale(1);
     opacity: 1; }
 }
 
+/* 7월 14일(수) ~ 8월 11일(수) 애니메이션 */
 .item_animation_02 {
   position: absolute;
   width: 888px;
   height: 98px;
   left: 0;
-  top: 775px;
-  animation: visual2 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
-	-webkit-animation: visual2 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
-}/* 7월 14일(수) ~ 8월 11일(수) 애니메이션 */
+  top: 772px;
+  animation: visual2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	-webkit-animation: visual2 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
 
 @keyframes visual2 {
   0% { transform: translateY(100px);
@@ -333,7 +342,7 @@ img.img_content {
 
 
 
-/* --- main event --- */
+/* ----- main event ----- */
 
 .wrap_event {
   overflow: hidden;
@@ -347,7 +356,6 @@ img.img_content {
 }
 
 .inner_event {
-  overflow: hidden;
   position: relative;
   width: 1600px;
   margin: 0 auto;
@@ -434,6 +442,7 @@ img.img_content {
   height: 44px;
 }
 
+/* default : 교환하기 비활성화 상태 */
 .link_exch {
   float: right;
   width: 89px;
@@ -443,19 +452,26 @@ img.img_content {
   -webkit-box-sizing: border-box;
   background: url(../images/btn_exchange.png) center top no-repeat;
   background-position: 0 0;
-}/* default : 교환하기 비활성화 상태 */
+}
 
+/* 교환하기 활성화 상태*/
 .link_exch.on,
 .link_exch:hover,
 .list_exch > li a:hover {
   background-position: 0 -42px;
-}/* 교환하기 활성화 상태*/
+}
 
+/* 교환완료 */
 .link_exch.off {
   background-position: 0 -84px;
-}/* 교환완료 */
+}
+
+
+
+/* --- event section 애니메이션 영역 --- */
 
 .wrap_animation_01 {
+  overflow: hidden;
   position: absolute;
   width: 593px;
   height: 1077px;
@@ -463,6 +479,16 @@ img.img_content {
   left: 208px;
 }
 
+.wrap_animation_02 {
+  overflow: hidden;
+  position: absolute;
+  width: 619px;
+  height: 480px;
+  top: 288px;
+  right: 174px;
+}
+
+/* left side - 버블 애니메이션 */
 .item_animation_03 {
   z-index: 1;
   position: absolute;
@@ -472,15 +498,16 @@ img.img_content {
   left: 30px;
   animation: floating1 15s ease-in-out infinite;
   -webkit-animation: floating1 15s ease-in-out infinite;
-}/* left side - 버블 애니메이션 */
+}
 
 @keyframes floating1 {
-  50% { transform: translate(0, 100px); }
+  50% { transform: translate(0, 90px); }
 }
 @-webkit-keyframes floating1 {
-  50% { transform: translate(0, 100px); }
+  50% { transform: translate(0, 90px); }
 }
 
+/* left side - 버블 애니메이션 */
 .item_animation_04 {
   z-index: 1;
   position: absolute;
@@ -490,7 +517,7 @@ img.img_content {
   left: 0;
   animation: floating2 18s ease-in-out infinite;
   -webkit-animation: floating2 18s ease-in-out infinite;
-}/* left side - 버블 애니메이션 */
+}
 
 @keyframes floating2 {
   50% { transform: translate(0, 40px); }
@@ -499,6 +526,7 @@ img.img_content {
   50% { transform: translate(0, 40px); }
 }
 
+/* left side - 해마 애니메이션 */
 .item_animation_06 {
   position: absolute;
   width: 531px;
@@ -507,7 +535,7 @@ img.img_content {
   left: 60px;
   animation: floating3 6s ease-in-out infinite;
   -webkit-animation: floating3 6s ease-in-out infinite;
-}/* left side - 해마 애니메이션 */
+}
 
 @keyframes floating3 {
   50% { transform: translate(0, 20px); }
@@ -516,15 +544,13 @@ img.img_content {
   50% { transform: translate(0, 20px); }
 }
 
-.wrap_animation_02 {
-  overflow: hidden;
-  position: absolute;
-  width: 619px;
-  height: 480px;
-  top: 288px;
-  right: 44px;
+@media all and (max-width: 1800px) {
+  .item_animation_06 {
+    opacity: 0.1 ;
+  }
 }
 
+/* right side - 버블 애니메이션 */
 .item_animation_07 {
   z-index: 1;
   position: absolute;
@@ -532,77 +558,115 @@ img.img_content {
   height: 480px;
   top: -42px;
   right: 182px;
-  animation: floating4 2s ease-in-out infinite;
-  -webkit-animation: floating4 2s ease-in-out infinite;
-}/* right side - 버블 애니메이션 */
+  animation: floating4 4s ease-in-out infinite;
+  -webkit-animation: floating4 4s ease-in-out infinite;
+}
 
 @keyframes floating4 {
-  50% { transform: translate(0, 4px); }
+  50% { transform: translate(0, 4.5px); }
 }
 @-webkit-keyframes floating4 {
-  50% { transform: translate(0, 4px); }
+  50% { transform: translate(0, 4.5px); }
 }
 
+/* right side - 왼쪽 물고기 애니메이션 */
 .item_animation_08 {
   position: absolute;
   width: 414px;
   height: 195px;
   top: 2px;
   right: 206px;
-  animation: fish1 3.5s ease-in-out infinite alternate backwards;
-	-webkit-animation: fish1 3.5s ease-in-out infinite alternate backwards;
-
-}/* right side - 왼쪽 물고기 애니메이션 */
+  animation: fish1 15s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate backwards;
+	-webkit-animation: fish1 15s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate backwards;
+}
 
 @keyframes fish1 {
-  0% { transform: translateX(15px);
-    -webkit-transform: translateX(15px);
-    opacity: 1; }
-  50% { opacity: 0; }
-  100% { transform: translateX(0);
-    -webkit-transform: translateX(0);
-    opacity: 0; }
+  0% { opacity: 1;
+    transform: translateX(120px);
+    -webkit-transform: translateX(120px);
+  }
+  100% { opacity: 0; }
 }
 @-webkit-keyframes fish1 {
-  0% { transform: translateX(15px);
-    -webkit-transform: translateX(15px);
-    opacity: 1; }
-  50% { opacity: 0; }
-  100% { transform: translateX(0);
-    -webkit-transform: translateX(0);
-    opacity: 0; }
+  0% { opacity: 1;
+    transform: translateX(120px);
+    -webkit-transform: translateX(120px);
+  }
+  100% { opacity: 0; }
 }
 
+/* right side - 오른쪽 물고기 애니메이션 */
 .item_animation_09 {
   position: absolute;
   width: 363px;
   height: 171px;
   top: 166px;
   right: 0;
-  animation: fish2 4s ease-out infinite alternate backwards;
-	-webkit-animation: fish2 4s ease-out infinite alternate backwards;
-}/* right side - 오른쪽 물고기 애니메이션 */
+  animation: fish2 6s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate backwards;
+	-webkit-animation: fish2 6s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate backwards;
+}
 
 @keyframes fish2 {
-  0% { transform: translateX(0);
+  0% { opacity: 0;
+    transform: translateX(0);
     -webkit-transform: translateX(0);
-    opacity: 1; }
-  50% { opacity: 0; }
-  100% { transform: translateX(-30px);
+  }
+  100% { opacity: 1;
+    transform: translateX(-30px);
     -webkit-transform: translateX(-30px);
-    opacity: 0; }
+  }
 }
 @-webkit-keyframes fish2 {
-  0% { transform: translateX(0);
+  0% { opacity: 0;
+    transform: translateX(0);
     -webkit-transform: translateX(0);
-    opacity: 1; }
-  50% { opacity: 0; }
-  100% { transform: translateX(-30px);
+  }
+  100% { opacity: 1;
+    transform: translateX(-30px);
     -webkit-transform: translateX(-30px);
-    opacity: 0; }
+  }
 }
 
-@media all and (max-width: 2559px) {
+/* 해상도 1800px 미만일 때 해마, 물고기의 opacity 최대 0.3으로 조정 */
+@media all and (max-width: 1800px) {
+  @keyframes fish1 {
+    0% { opacity: 0.3;
+      transform: translateX(120px);
+      -webkit-transform: translateX(120px);
+    }
+    100% { opacity: 0; }
+  }
+  @-webkit-keyframes fish1 {
+    0% { opacity: 0.3;
+      transform: translateX(120px);
+      -webkit-transform: translateX(120px);
+    }
+    100% { opacity: 0; }
+  }
+
+  @keyframes fish2 {
+    0% { opacity: 0;
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+    }
+    100% { opacity: 0.3;
+      transform: translateX(-30px);
+      -webkit-transform: translateX(-30px);
+    }
+  }
+  @-webkit-keyframes fish2 {
+    0% { opacity: 0;
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+    }
+    100% { opacity: 0.3;
+      transform: translateX(-30px);
+      -webkit-transform: translateX(-30px);
+    }
+  }
+}
+
+@media all and (max-width: 2500px) {
   .wrap_animation_01 {
     position: absolute;
     width: 593px;
@@ -612,12 +676,13 @@ img.img_content {
   }
 
   .wrap_animation_02 {
+    overflow: hidden;
     position: absolute;
     width: 619px;
-    height: 400px;
-    top: 286px;
+    height: 480px;
+    top: 288px;
     right: 0;
-  }  
+  }
 }
 
 .btn_purchase {
@@ -665,66 +730,9 @@ img.img_content {
   right: 0;
 }
 
-@-webkit-keyframes saleTag {
-  from { transform: scale(1);
-    -webkit-transform: scale(1);
-    transform-origin: center center;
-    -webkit-transform-origin: center center;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out; }
-  10% { transform: scale(0.91);
-    -webkit-transform: scale(0.91);
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in; }
-  17% { transform: scale(0.98);
-    -webkit-transform: scale(0.98);
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out; }
-  33% { transform: scale(0.87);
-    -webkit-transform: scale(0.87);
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in; }
-  45% { transform: scale(1);
-    -webkit-transform: scale(1);
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out; }
-}
-@keyframes saleTag {
-  from { transform: scale(1);
-    -webkit-transform: scale(1);
-    transform-origin: center center;
-    -webkit-transform-origin: center center;
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out; }
-  10% { transform: scale(0.91);
-    -webkit-transform: scale(0.91);
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in; }
-  17% { transform: scale(0.98);
-    -webkit-transform: scale(0.98);
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out; }
-  33% { transform: scale(0.87);
-    -webkit-transform: scale(0.87);
-    animation-timing-function: ease-in;
-    -webkit-animation-timing-function: ease-in; }
-  45% { transform: scale(1);
-    -webkit-transform: scale(1);
-    animation-timing-function: ease-out;
-    -webkit-animation-timing-function: ease-out; }
-}
-
-/* 해마 효과 */
-@keyframes floating {
-  50% { transform: translate(0, 20px); }
-}
-@-webkit-keyframes floating {
-  50% { transform: translate(0, 20px); }
-}
 
 
-
-/* --- aside --- */
+/* ----- aside ----- */
 
 .btn_top {
   z-index: 999;
@@ -744,7 +752,7 @@ img.img_content {
     visibility: hidden;
   }
 }
-@media all and (min-width: 1601px) and (max-width: 2000px) {
+@media all and (min-width: 1800px) and (max-width: 2000px) {
   .btn_top {
     right: 60px;
   }
@@ -762,7 +770,7 @@ img.img_content {
 
 
 
-/* --- footer --- */
+/* ----- footer ----- */
 
 .section_footer {
   overflow: hidden;
