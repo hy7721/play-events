@@ -176,7 +176,7 @@ $(function() {
       });
 
       // scrollBtn 스크롤다운 버튼
-      $('.wrap_visual .btn_scroll').on('click', function(){
+      $('.btn_scroll').on('click', function(){
         $('html, body').animate({
             scrollTop : $('#sectionEvent01').offset().top
         }, 400);
@@ -236,32 +236,32 @@ function checkOnlyOne(chk){
 }
 
 // mousewheel 한 번에 fullpage 하나씩 이동
-window.addEventListener("wheel", function(e){
-	e.preventDefault();
-},{passive : false});
+// window.addEventListener("wheel", function(e){
+// 	e.preventDefault();
+// },{passive : false});
 
-var $html = $("html");
-var page = 1;
-var lastPage = $(".section_event_03").length;
+// var $html = $("html");
+// var page = 1;
+// var lastPage = $(".section_event_03").length;
 
-$html.animate({scrollTop:0},10);
+// $html.animate({scrollTop:0},10);
 
-$(window).on("wheel", function(e){
-	if( $html.is(":animated") ) return;
+// $(window).on("wheel", function(e){
+// 	if( $html.is(":animated") ) return;
 
-  if( e.originalEvent.deltaY > 0) {
+//   if( e.originalEvent.deltaY > 0) {
 
-    if(page == lastPage) return;
-		page++;
-  }
+//     if(page == lastPage) return;
+// 		page++;
+//   }
   
-    else if( e.originalEvent.deltaY < 0 ) {
+//     else if( e.originalEvent.deltaY < 0 ) {
 
-    if(page == 1) return;
-		page--;
-	}
+//     if(page == 1) return;
+// 		page--;
+// 	}
 
-	var posTop = (page-1) * $(window).height();
+// 	var posTop = (page-1) * $(window).height();
 
-  $html.animate({scrollTop : posTop});
-});
+//   $html.animate({scrollTop : posTop});
+// });
