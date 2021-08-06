@@ -93,12 +93,6 @@ window.onload = function() {
 
 $(function() {
 
-  // scrollEvent
-  AOS.init({
-    easing: 'ease-in-out',
-    duration: 600
-  });
-
   // popupOpen
   $('[data-popup-open]').on('click', function(e)  {
     var targeted_popup_class = jQuery(this).attr('data-popup-open');
@@ -176,7 +170,7 @@ $(function() {
       });
 
       // scrollBtn 스크롤다운 버튼
-      $('.btn_scroll').on('click', function(){
+      $('.wrap_visual .btn_scroll').on('click', function(){
         $('html, body').animate({
             scrollTop : $('#sectionEvent01').offset().top
         }, 400);
@@ -207,6 +201,21 @@ $(function() {
     autoplaySpeed: 2000,
     pauseOnHover: false,
   });
+
+
+  // fade-in effect
+  $(window).scroll( function(){
+    $('.hideme').each( function(i){
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        if( bottom_of_window > bottom_of_object ){
+            $(this).addClass('showme');
+        }
+        if( bottom_of_window < bottom_of_object ){
+            $(this).removeClass('showme');
+        }
+    });
+  });
 });
 
 // 사전모집 영역 레이어 팝업
@@ -225,43 +234,43 @@ $(document).on("click", ".btn_close", function(){
   };
 });
 
-// 개인정보 수집 및 동의 > 동의, 비동의 중 하나만 선택할 수 있도록 하는 코드
+// 개인정보 수집 및 동의 체크박스 > 동의, 비동의 중 하나만 선택할 수 있도록 하는 코드
 function checkOnlyOne(chk){
   var obj = document.getElementsByName("confirmNumber");
   for( var i = 0; i < obj.length; i++ ) {
-      if( obj[i] != chk ) {
-          obj[i].checked = false;
-      }
+    if( obj[i] != chk ) {
+        obj[i].checked = false;
+    }
   }
 }
 
-// mousewheel 한 번에 fullpage 하나씩 이동
-// window.addEventListener("wheel", function(e){
-// 	e.preventDefault();
-// },{passive : false});
+// fullpage scroll event
+window.addEventListener("wheel", function(e){
+	e.preventDefault();
+},{passive : false});
 
-// var $html = $("html");
-// var page = 1;
-// var lastPage = $(".section_event_03").length;
+var $html = $("html");
+var page = 1;
+var lastPage = $(".wrap_event").length;
 
-// $html.animate({scrollTop:0},10);
+$html.animate({scrollTop:0},10);
 
-// $(window).on("wheel", function(e){
-// 	if( $html.is(":animated") ) return;
+$(window).on("wheel", function(e){
+	if( $html.is(":animated") ) return;
 
-//   if( e.originalEvent.deltaY > 0) {
+  if( e.originalEvent.deltaY > 0) {
 
-//     if(page == lastPage) return;
-// 		page++;
-//   }
+    if(page == lastPage) return;
+		page++;
+  }
   
-//     else if( e.originalEvent.deltaY < 0 ) {
+    else if( e.originalEvent.deltaY < 0 ) {
 
-//     if(page == 1) return;
-// 		page--;
-// 	}
+    if(page == 1) return;
+		page--;
+	}
 
-// 	var posTop = (page-1) * $(window).height();
+	var posTop = (page-1) * $(window).height();
 
-//   $html.animate({scrollTop : posTop});
-// });
+  $html.animate({scrollTop : posTop});
+});
