@@ -6,42 +6,42 @@
   font-family: 'Noto Sans KR';
   font-weight: 100;
   display: swap;
-  src: url("../fonts/NotoSansKR-Thin.woff") format("woff"), url("../fonts/NotoSansKR-Thin.ttf") format("truetype");
+  src: url("../fonts/NotoSansKR-Thin.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 300;
   display: swap;
-  src: url("../fonts/NotoSansKR-Light.woff") format("woff"), url("../fonts/NotoSansKR-Light.ttf") format("truetype");
+  src: url("../fonts/NotoSansKR-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 400;
   display: swap;
-  src: url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.ttf") format("truetype");
+  src: url("../fonts/NotoSansKR-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 500;
   display: swap;
-  src: url("../fonts/NotoSansKR-Medium.woff") format("woff"), url("../fonts/NotoSansKR-Medium.ttf") format("truetype");
+  src: url("../fonts/NotoSansKR-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 700;
   display: swap;
-  src: url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.ttf") format("truetype");
+  src: url("../fonts/NotoSansKR-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-weight: 900;
   display: swap;
-  src: url("../fonts/NotoSansKR-Black.woff") format("woff"), url("../fonts/NotoSansKR-Black.ttf") format("truetype");
+  src: url("../fonts/NotoSansKR-Black.ttf") format("truetype");
 }
 
 
@@ -220,6 +220,7 @@ img.img_content {
 /* ----- style css ----- */
 
 #rohanWrap {
+  scroll-behavior: smooth;
   position: relative;
   width: 100%;
   min-width: 1580px;
@@ -236,7 +237,7 @@ img.img_content {
 .section_visual {
   position: relative;
   width: 100%;
-  min-width: 15800px;
+  min-width: 1580px;
   height: 100%;
   max-height: 1400px;
   min-height: 900px;
@@ -587,6 +588,7 @@ img.img_content {
 /* main event */
 
 .wrap_event {
+  scroll-behavior: smooth;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -1280,10 +1282,6 @@ img.img_content {
   top: 50%;
 }
 
-.list_aside li {
-  background: url(../images/img_nav.png) no-repeat left top;
-}
-
 .list_aside > li > a,
 .link_aside,
 .list_aside li {
@@ -1294,44 +1292,56 @@ img.img_content {
   box-sizing: border-box;
 }
 
-.list_aside li:nth-child(1) a {
+.list_aside li:nth-child(1),
+.list_aside li:nth-child(1) .link_aside {
   height: 95px;
+  background: url(../images/img_nav.png) no-repeat left top;
   background-position: 0 0;
 }
+.list_aside li:nth-child(1):hover,
 .list_aside li:nth-child(1):hover .link_aside,
 .list_aside li:nth-child(1) .link_aside.is_active {
   height: 95px;
   background-position: -105px 0;
 }
 
-.list_aside li:nth-child(2) a {
+.list_aside li:nth-child(2),
+.list_aside li:nth-child(2) .link_aside {
   height: 66px;
+  background: url(../images/img_nav.png) no-repeat left top;
   background-position: 0 -95px;
 }
+.list_aside li:nth-child(2):hover,
 .list_aside li:nth-child(2):hover .link_aside,
 .list_aside li:nth-child(2) .link_aside.is_active {
   height: 66px;
   background-position: -105px -95px;
 }
 
-.list_aside li:nth-child(3) a {
+.list_aside li:nth-child(3),
+.list_aside li:nth-child(3) .link_aside {
   height: 70px;
+  background: url(../images/img_nav.png) no-repeat left top;
   background-position: 0 -161px;
 }
+.list_aside li:nth-child(3):hover,
 .list_aside li:nth-child(3):hover .link_aside,
 .list_aside li:nth-child(3) .link_aside.is_active {
   height: 70px;
   background-position: -105px -161px;
 }
 
-.list_aside li:nth-child(4) a {
-  height: 90px;
-  background-position: 0 -251px;
+.list_aside li:nth-child(4),
+.list_aside li:nth-child(4) .link_aside {
+  height: 103px;
+  background: url(../images/img_nav.png) no-repeat left top;
+  background-position: 0 -231px;
 }
+.list_aside li:nth-child(4):hover,
 .list_aside li:nth-child(4):hover .link_aside,
 .list_aside li:nth-child(4) .link_aside.is_active {
-  height: 90px;
-  background-position: -105px -251px;
+  height: 103px;
+  background-position: -105px -231px;
 }
 
 /* footer */
@@ -1393,21 +1403,21 @@ img.img_content {
 
 /* ----- media query ----- */
 
+@media screen and (max-width: 1580px) {
+  body {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
+
 @media screen and (min-width: 1581px) {
   body {
     overflow: hidden;
     -ms-overflow-style: none;
   }
-  
+
   ::-webkit-scrollbar {
     display: none;
-  }
-}
-
-@media screen and (max-width: 1580px) {
-  body {
-    overflow-x: scroll;
-    overflow-y: hidden;
   }
 }
 
