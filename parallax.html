@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>로한 온라인 16주년 기념 이벤트</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- javascript -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/main.js"></script>
+
+  <style>
+
+.r_aside{
+  z-index: 7721;
+  position: fixed;
+  width: 330px;
+  height: 433px;
+  right: 5%;
+  top: 490px;
+  background: url(./images/bg_nav.png) center top no-repeat;
+}
+
+.r_aside ul {
+  margin: 128px 0 0 92px;
+  width: 146px;
+  height: 138px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.r_aside > li > a,
+.link_aside,
+.r_aside li {
+  width: 146px;
+  height: 37px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.r_aside li {
+  width: 146px;
+  height: 37px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./images/img_nav.png) center top no-repeat;
+}
+
+.r_aside li + li {
+  margin: 13px 0 0 0;
+}
+
+
+.r_aside li:nth-child(1) {
+  background-position: 0 0;
+}
+
+.r_aside li:nth-child(2) {
+  background-position: 0 -37px;
+}
+
+.r_aside li:nth-child(3) {
+  background-position: 0 -74px;
+}
+
+.r_aside li:nth-child(1):hover,
+.r_aside li:nth-child(1).active,
+.r_aside li:nth-child(2):hover,
+.r_aside li:nth-child(2).active,
+.r_aside li:nth-child(3):hover,
+.r_aside li:nth-child(3).active {
+  background-position-x: 100%;
+}
+
+
+
+
+#sectionEvent01 {
+  height: 3576px;
+  background: url(./images/bg_event_01.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+#sectionEvent02 {
+  height: 2266px;
+  background: url(./images/bg_event_02.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+#sectionEvent03 {
+  height: 3576px;
+  background: url(./images/bg_event_01.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+
+.event_list{height: auto; min-height: 100%;position: relative;box-sizing: border-box;}
+.event_list .event_item{display: none;}
+.event_list .event_item.active{display: block;}
+
+/* .event_list .event_item .depth{} */
+.event_list .event_item .depth:after{clear: both;display: block;content: "";}
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <!-- #rohanWrap -->
+  <div id="rohanWrap">
+
+    <!-- #rVisual -->
+    <div class="r_visual" id="rVisual">
+
+      <!-- header -->
+      <header class="r_header" id="rHeader">
+        <h1 class="tit_logo">
+          <a href="javascript:closeWin();" class="link_logo">
+            <img src="./images/img_logo.png" class="img_content" alt="ROHAN">
+          </a>
+        </h1>
+        <h2><span class="sr_only">유틸리티 메뉴</span></h2>
+        <ul class="list_util">
+          <li><a href="javascript:closeWin();" class="ico_home link_home ico_comm"><span class="sr_only">메인 화면으로 가기</span></a></li>
+          <li><a href="javascript:closeWin2();" class="ico_close link_close ico_comm"><span class="sr_only">이벤트 닫기</span></a></li>
+        </ul>
+      </header>
+      <!-- // header -->
+
+      <div class="section_visual">
+        <div class="inner_visual">
+          <div class="wrap_visual_01"></div>
+          <div class="wrap_visual_02"></div>
+        </div>
+        <div class="wrap_visual_03"></div>
+      </div>
+    </div>
+    <!-- // #rVisual -->
+
+    <!-- #rMain -->
+    <main class="r_main" id="rMain">
+
+      <div class="event_list">
+        <div id="sectionEvent01" class="event_item ">
+          <div class="depth"></div>
+        </div>
+        <div id="sectionEvent02" class="event_item active">
+          <div class="depth"></div>
+        </div>
+        <div id="sectionEvent03" class="event_item ">
+          <div class="depth"></div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- #rAside -->
+    <aside class="r_aside" id="rAside">
+      <ul>
+        <li><a href="#sectionEvent01" class="link_aside"><span class="sr_only">신규종족 에시르 오픈</span></a></li>
+        <li class="active"><a href="#sectionEvent02" class="link_aside"><span class="sr_only">신규서버 마레아 오픈</span></a></li>
+        <li><a href="#sectionEvent03" class="link_aside"><span class="sr_only">한가위 이벤트</span></a></li>
+      </ul>
+    </aside>
+    <!-- // #rAside -->
+
+  </div><!-- // #rohanWrap -->
+
+
+  <script>
+    $(".r_aside").on("click", "a", function (e) {
+      e.preventDefault();
+      $(this).closest("li").addClass("active").siblings().removeClass("active");
+      var _index = $(this).closest("li").index();
+      $(".event_list .event_item").eq(_index).addClass("active").siblings().removeClass("active");
+        if (_index == 0) {
+            $("#block_0").show(); $("#block_1").hide();
+        }
+        else {
+            $("#block_1").show(); $("#block_0").hide();
+        }
+    })
+  </script>
+
+</body></html>
