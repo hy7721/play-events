@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  // slick
   $('.wrap_event').slick({
     arrows: false,
     dots: true,
@@ -7,35 +9,45 @@ $(document).ready(function(){
     cssEase: 'ease-out',
     slidesToShow: 1,
     adaptiveHeight: true,
-    customPaging : function(slider, i) {
-      return '<a class="slick-link" href="#rMain"></a>';
-    }
+    // customPaging : function(slider, i) {
+    //   return '<a class="slick-link" href="#rMain"></a>';
   });
-});
+
+  // aside menu (slick-dots)
+  const currentPosition = parseInt($(".r_aside").css("top"));
+
+  $(window).scroll(function() {
+    var position = $(window).scrollTop();
+    $(".r_aside").stop().animate({"top":position+currentPosition+"px"},300); });
+  });
+
+  // top
+  // function myFunction(){
+  //   $('list_aside button').on('click', function(){
+  //     $(this).add({
+  //     'id', 'rMain'
+  //   })
+  // }
+
+  // $('.list_aside button').click(function(){
+  //   alert(click);
+  // })
+
+  // const $rAside = $('.r_aside')
+  // $('.r_aside button').click(function(){
+  //   $rAside.css('top', (parseInt($rAside).css('top') + 1440) + "px");
+  // })
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(document).ready(function(){
+  // refresh > back to top
+  $("html, body").animate({
+    scrollTop: 0
+  });
 
   // youtube popup
   function layerPopupOpen($t){
     $(".wrap_popup" + "." + $t).stop(true, true).fadeIn(300);
-    // $('body').css("overflow", "hidden");
   };
 
   function layerPopupClose(){
@@ -44,23 +56,55 @@ $(document).ready(function(){
     });
   };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // go to top button
   // function goTop(){
   //   $('html, body').scrollTop(0);
   // }
 
-  // 새로고침 시 메인 페이지로 이동
-  $("html, body").animate({
-    scrollTop: 0
-  });
+
 
   // rAside
-  var currentPosition = parseInt($("#rAside").css("top"));
-  $(window).scroll(function() {
-      var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
-      $("#rAside").stop().animate({"top":position+currentPosition+"px"},600);
-  });
-});
+  // var currentPosition = parseInt($("#rAside .list_aside").css("top"));
+  // $(window).scroll(function() {
+  //     var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환합니다.
+  //     $("#rAside .list_aside").stop().animate({"top":position+currentPosition+"px"},600);
+  // });
+
 
 // $('.list_aside li a').click(function() {
   
