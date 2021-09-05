@@ -669,45 +669,90 @@ br {
   background: url(../images/img_copyright_03.png) center top no-repeat;
 }
 
-#rAside {
+.r_aside {
   z-index: 7721;
   position: absolute;
   width: 330px;
   height: 433px;
-  left: 50%;
+  top: -30%;
+  right: 0;
+
+
+  
+  /* left: 50%;
   top: 490px;
   margin-left: 780px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-
+   */
 }
 
 .list_aside {
+  /* z-index: 721;
+  position: fixed; */
   width: 330px;
   height: 433px;
-  padding: 61px 60px 168px 92px;
+  padding: 128px 60px 168px 92px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: url(../images/bg_nav.png) center top no-repeat;
+  
 }
 
 .list_aside li {
+  width: 152px;
+  height: 37px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   background: url(../images/img_nav.png) center top no-repeat;
 }
 
+
 .list_aside li,
 .link_aside,
-.list_aside li a {
+.list_aside li button{
   width: 152px;
+  height: 37px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: middle;
 }
 
-.list_aside li:nth-child(1),
+.list_aside li+li {
+  margin: 13px 0 0 0;
+}
+
+.list_aside button,
+.link_aside {
+  text-indent: -9999px;
+}
+
+.list_aside li:nth-child(1) {
+  background-position: 0 -31px;
+}
+
+.list_aside li:nth-child(2) {
+  background-position: 0 -68px;
+}
+
+.list_aside li:nth-child(3) {
+  background-position: 0 -105px;
+}
+
+.list_aside li:nth-child(1):hover,
+.list_aside li:nth-child(1).slick-active,
+.list_aside li:nth-child(2):hover,
+.list_aside li:nth-child(2).slick-active,
+.list_aside li:nth-child(3):hover,
+.list_aside li:nth-child(3).slick-active {
+  background-position-x: 100%;
+}
+
+/* .list_aside li:nth-child(1),
 .link_aside:nth-child(1),
 .list_aside li a:nth-child(1) {
   height: 31px;
@@ -749,7 +794,7 @@ br {
 .list_aside li:nth-child(4) {
   height: 37px;
   background-position: 0 -105px;
-}
+} */
 
 .list_aside li:nth-child(1):hover,
 .list_aside li:nth-child(1).slick-active,
