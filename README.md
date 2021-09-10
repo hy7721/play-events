@@ -1,3 +1,2 @@
-# Event Templates
-
-자주 사용하는 이벤트를 템플릿화 해놓은 작업물입니다.
+# play-events
+이벤트 페이지 작업물을 모아둔 repo입니다.
