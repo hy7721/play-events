@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신년인사 - seal</title>
+
+
+
+
+
+  <!-- 팝업 시작 -->
+  <style>
+    #happyNewYear { z-index: 77721; display: none; position: fixed; width: 100%; height: 100%; top: 0; left: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+    .sr-only { opacity: 0; z-index: -7721; overflow: hidden; position: absolute; width: 1px; height: 1px; }
+    .img-popup { display: block; width: 600px; height: auto; border: 0 none; }
+    .popup-content { z-index: 721; position: fixed; max-width: 600px; height: auto; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+    .btn-close-popup { position: absolute; width: 30px; height: 30px; top: -50px; right: -10px; margin: 10px; background: url(./images/ico_close_pop.png) top center no-repeat; }
+    .btn-block-popup { position: relative; display: inline-block; margin-top: 10px; cursor: pointer; font-size: 14px; line-height: 14px; letter-spacing: -0.5px; text-decoration: none; color: #CECECE !important; font-family: 'Roboto', 'notosans', 'Apple SD Gothic Neo', Dotum, '돋움', sans-serif; }
+    .btn-block-popup:hover, .btn-block-popup:active, .btn-block-popup:visited { cursor: pointer; color: #CECECE !important; }
+    .popup-dimmed { z-index: 21; display: block; position: fixed; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.8); }
+  </style>
+</head>
+<body>
+  <div id="happyNewYear">
+    <div class="popup-content">
+      <img src="./images/img-newyear.jpg" class="img-popup" alt="2022 HAPPY NEW YEAR 새해 복 많이 받으세요.">
+      <div class="sr-only">
+        <strong>2022 HAPPY NEW YEAR 새해 복 많이 받으세요.</strong>
+        <p>지난 한 해 동안 씰온라인에 보내주신 관심과 성원에 감사드립니다. 임인년 새해에는 호랑이 기운을 받아 늘 건강하시고 행복한 일이 가득하시길 바랍니다. 저희 씰온라인도 일상의 소소한 행복이 될 수 있도록 서비스 제공에 최선을 다하겠습니다. 2022년에도 많은 관심과 사랑 부탁드립니다.</p>
+      </div>
+      <a href="#none" class="btn-block-popup">오늘 하루 열지 않기</a>
+      <a href="#none" class="btn-close-popup"><i class="ico-close-popup"><span class="sr-only">팝업창 닫기</span></i></a>
+    </div>
+    <div class="popup-dimmed"></div>
+  </div>
+  <script>
+    let $happyNewYear = document.querySelector('#happyNewYear');
+    let $btnBlockPopup = document.querySelector('.btn-block-popup');
+    let $btnClosePopup = document.querySelector('.btn-close-popup');
+
+    // 최초 팝업 노출
+    happyNewYearShow();
+
+    // 팝업 닫기 버튼 클릭
+    $btnClosePopup.addEventListener('click', function(){
+      happyNewYearHide();
+    });
+
+    // 팝업 오늘 하루 보지 않기 버튼 클릭
+    $btnBlockPopup.addEventListener('click', function(){
+      happyNewYearHide();
+    });
+
+    // 팝업 노출
+    function happyNewYearShow(){
+      $happyNewYear.style.display = 'block'
+    }
+
+    // 팝업 비노출
+    function happyNewYearHide(){
+      $happyNewYear.style.display = 'none'
+    }
+  </script>
+  <!-- 팝업 끝 -->
+
+
+
+
+
+</body>
+</html>
