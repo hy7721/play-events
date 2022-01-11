@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오리사냥 이벤트</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/rStyle.css">
+
+  <!-- js -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/rMain.js"></script>
+</head>
+
+<body>
+  <div id="rWrap">
+
+    <header id="rHeader" class="r-header">
+      <h1>
+        <a href="javascript:closeWin();" class="link-logo">
+          <img src="./images/logo.png" class="img-logo" alt="ROHAN 로한">
+        </a>
+      </h1>
+      <h2><span class="sr-only">네비게이션 영역</span></h2>
+      <nav id="rNav" class="r-nav">
+        <ul>
+          <li><a href="javascript:closeWin();" class="link-home"><span class="sr-only">메인 화면으로 이동</span></a></li>
+          <li><a href="javascript:closeWin2();" class="link-close"><span class="sr-only">이벤트 닫기</span></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <h2><span class="sr-only">이벤트 메인 영역</span></h2>
+    <main id="rMain" class="r-main">
+      <section class="event-visual">
+        <h3><span class="sr-only">이벤트 비주얼 영역</span></h3>
+        <div class="wrap-animation">
+          <img src="./images/img-visual-01.png" class="img-visual-01" alt="ROHAN EVENT">
+          <img src="./images/img-visual-02.png" class="img-visual-02" alt="오리사냥 이벤트">
+          <img src="./images/img-visual-03.png" class="img-visual-03" alt="로한대륙에서 모크덕을 처치하고, 오리알을 획득하세요!">
+          <img src="./images/img-visual-04.png" class="img-visual-04" alt="2021년 11월 10일 점검 후 ~ 2021년 12월 08일 점검 전">
+          <img src="./images/img-visual-05.png" class="img-visual-05" alt="본서버 전용 이벤트입니다. 시즌서버에서는 적용되지 않습니다.">
+        </div>
+      </section>
+      <section class="event-wrap">
+        <h3><span class="sr-only">EVENT 1. 오리사냥!</span></h3>
+        <div class="event-01">
+          <img src="./images/img-event-0101.png" class="img-event" data-aos="fade-up" data-aos-duration="800" alt="">
+          <div class="sr-only">
+            <h4>STEP 1. 정해진 지역에서 모크덕과 자이언트 모크덕이 등장합니다.</h4>
+            <strong>4대 초월 던전 &lt;모크덕&gt; 등장</strong>
+            <ul>
+              <li>폐쇄된 광산</li>
+              <li>악마의 동굴</li>
+              <li>케우라 예배당</li>
+              <li>가라앉은 신전</li>
+            </ul>
+            <strong>갈라진 땅, 무한의 호수, 얼어붙은 빛, 카리스티아 &lt;자이언트 모크덕&gt; 등장</strong>
+            <ul>
+              <li>다르베가완 지역의 갈라진 땅</li>
+              <li>가이잔 지역의 무한의 호수</li>
+              <li>리옴 지역의 얼어붙은 빛</li>
+              <li>카리스티아 (주둔지 제외)</li>
+            </ul>
+            <ul>
+              <li>※ 처치 후 일정 시간이 지나면 리젠됩니다. 위치는 무작위이며 개체 수는 지역별로 적용됩니다.</li>
+              <li>※ 이벤트 기간 동안 운영진은 이벤트 지역에서 발생하는 PK에 관여하지 않습니다.</li>
+            </ul>
+            <strong>지역별 모크덕 개체 수</strong>
+            <table>
+              <tr>
+                <td>지역</td>
+                <td>이벤트 몬스터 종류</td>
+                <td>개체 수</td>
+              </tr>
+              <tr>
+                <td>폐쇄된 광산</td>
+                <td rowspan="4">모크덕</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>악마의 동굴</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>케우라 예배당</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>가라앉은 신전</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>갈라진 땅</td>
+                <td rowspan="4">자이언트 모크덕</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>무한의 호수</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>얼어붙은 빛</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>카리스티아(주둔지 제외)</td>
+                <td>10</td>
+              </tr>
+            </table>
+          </div>
+          <img src="./images/img-event-0102.png" class="img-event" data-aos="fade-up" data-aos-duration="800" alt="">
+          <div class="sr-only">
+            <h4>STEP 2. 모크덕을 처치하고, 오리알을 획득하세요.</h4>
+            <strong>모크덕 아이템 드랍</strong>
+            <table>
+              <tr>
+                <td>몬스터 명</td>
+                <td>드랍 아이템명</td>
+                <td>드랍확률</td>
+              </tr>
+              <tr>
+                <td>모크덕</td>
+                <td>빛나는 황금 오리알</td>
+                <td rowspan="2">100%</td>
+              </tr>
+              <tr>
+                <td>자이언트 모크덕</td>
+                <td>영롱한 황금 오리알</td>
+              </tr>
+            </table>
+            <strong>오리알 구성품 정보</strong>
+            <table>
+              <tr>
+                <td colspan="3">빛나는 황금 오리알 (정해진 확률에 따라 1종 획득)</td>
+              </tr>
+              <tr>
+                <td>아이템명</td>
+                <td>수량</td>
+                <td>거래가능여부</td>
+              </tr>
+              <tr>
+                <td>1000만 크론 주머니</td>
+                <td>1</td>
+                <td>불가(크론은 가능)</td>
+              </tr>
+              <tr>
+                <td>200% 성장의 주문서(캐쉬) - 2시간</td>
+                <td>1</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>용사의 강화석</td>
+                <td>3</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>신속 성장의 사료</td>
+                <td>1</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>향상된 에이션트 스킬 강화석(이벤트)</td>
+                <td>1</td>
+                <td>불가</td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td colspan="3">영롱한 황금 오리알 (정해진 확률에 따라 1종 획득)</td>
+              </tr>
+              <tr>
+                <td>아이템명</td>
+                <td>수량</td>
+                <td>거래가능여부</td>
+              </tr>
+              <tr>
+                <td>천상의 물약</td>
+                <td>2</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>300% 성장의 주문서(이벤트) - 2시간</td>
+                <td>1</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>용사의 강화석</td>
+                <td>10</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>일반 소원권</td>
+                <td>1</td>
+                <td>가능</td>
+              </tr>
+              <tr>
+                <td>특별한 소원권</td>
+                <td>1</td>
+                <td>가능</td>
+              </tr>
+            </table>
+            <strong>※ 300% 성장의 주문서(이벤트) - 2시간, 빛나는/영롱한 황금 오리알은 12월 08일 정기점검 시 일괄적으로 회수됩니다.</strong>
+          </div>
+        </div>
+        <h3><span class="sr-only">EVENT 2. 겨울의 정수 수립</span></h3>
+        <div class="event-02">
+          <img src="./images/img-event-02.png" class="img-event" data-aos="fade-up" data-aos-duration="800" alt="">
+          <div class="sr-only">
+            <h4>STEP 1. 로한대륙의 몬스터를 처치하고 겨울의 정수를 획득하세요!</h4>
+            <table>
+              <tr>
+                <td>이벤트 아이템명</td>
+                <td>아이템 설명</td>
+              </tr>
+              <tr>
+                <td>겨울의 정수</td>
+                <td>겨울의 기운이 담겨있는 정수입니다. 트렌드에게 여러가지 아이템으로 교환할 수 있습니다.</td>
+              </tr>
+            </table>
+            <h4>STEP 2. NPC트렌드를 통해 다양한 아이템으로 교환하세요.</h4>
+            <table>
+              <tr>
+                <td>NPC명</td>
+                <td>퀘스트명</td>
+                <td>반복여부</td>
+                <td>대상</td>
+                <td>조건</td>
+                <td>보상</td>
+                <td>보상 거래여부</td>
+              </tr>
+              <tr>
+                <td rowspan="5">트렌드</td>
+              </tr>
+              <tr>
+                <td>천상의 물약 교환</td>
+                <td rowspan="2">가능</td>
+                <td rowspan="4">모든 캐릭터</td>
+                <td>겨울의 정수 x15</td>
+                <td>천상의 물약 x1</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>성장의 주문서 교환</td>
+                <td>겨울의 정수 x15</td>
+                <td>300% 성장의 주문서(이벤트) –2시간 x1</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>장기 여행용 사료팩 교환</td>
+                <td rowspan="2">불가</td>
+                <td>겨울의 정수 x100</td>
+                <td>장기 여행용 사료팩 (7일)(캐시) x1</td>
+                <td>불가</td>
+              </tr>
+              <tr>
+                <td>사냥 도우미 교환</td>
+                <td>겨울의 정수 x100</td>
+                <td>봉인된 사냥 도우미 (168시간) x1</td>
+                <td>불가</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h3><span class="sr-only">EVENT 3. 부가서비스 할인</span></h3>
+        <div class="event-03">
+          <img src="./images/img-event-03.png" class="img-event" data-aos="fade-up" data-aos-duration="800" alt="">
+          <div class="sr-only">
+            <h4>이벤트 기간 동안 캐릭터와 길드 관련 부가서비스를 30% 할인된 가격에 이용하세요!</h4>
+            <strong>이벤트기간 : 2021.11.10 ~ 2021.12.08 점검 전</strong>
+            <table>
+              <tr>
+                <td>부가서비스 이름</td>
+                <td>기존가격</td>
+                <td>할인가격</td>
+              </tr>
+              <tr>
+                <td>캐릭터 서버이전 서비스</td>
+                <td>20,000원</td>
+                <td>14,000원</td>
+              </tr>
+              <tr>
+                <td>캐릭터 이전 서비스</td>
+                <td>10,000원</td>
+                <td>7,000원</td>
+              </tr>
+              <tr>
+                <td>캐릭터명 변경 서비스</td>
+                <td>25,000원</td>
+                <td>17,500원</td>
+              </tr>
+              <tr>
+                <td>캐릭터 성별변경 서비스</td>
+                <td>10,000원</td>
+                <td>7,000원</td>
+              </tr>
+              <tr>
+                <td>캐릭터 종족변경 서비스</td>
+                <td>38,000원</td>
+                <td>26,600원</td>
+              </tr>
+              <tr>
+                <td>경험치 복구 서비스</td>
+                <td>30,000원</td>
+                <td>21,000원</td>
+              </tr>
+              <tr>
+                <td>초월 스탯 변경 서비스(초월자 전용)</td>
+                <td>14,000원</td>
+                <td>9,800원</td>
+              </tr>
+              <tr>
+                <td>길드 생성 서비스</td>
+                <td>19,000원</td>
+                <td>13,300원</td>
+              </tr>
+              <tr>
+                <td>길드명 변경 서비스</td>
+                <td>48,000원</td>
+                <td>33,600원</td>
+              </tr>
+              <tr>
+                <td>길드마스터 위임 서비스</td>
+                <td>48,000원</td>
+                <td>33,600원</td>
+              </tr>
+            </table>
+          </div>
+          <a href="https://secure.rohan.co.kr/payment/append_01.html" class="link-service" data-aos="fade-up" data-aos-duration="1600" target="_blank"><span class="sr-only">부가서비스 이용하기</span></a>
+        </div>
+      </section>
+    </main>
+
+    <h2><span class="sr-only">푸터 영역</span></h2>
+    <footer id="rFooter" class="r-footer">
+      <img src="./images/img-copyright.png" class="img-copyright" alt="&copy; PLAYWITH GAMES Inc. All Rights Reserved.">
+    </footer>
+
+    <aside id="rAside" class="r-aside">
+      <button type="button" class="btn-top"><span class="sr-only">페이지 맨 위로 이동</span></button>
+    </aside>
+
+  </div><!-- // #rWrap -->
+</body></html>
