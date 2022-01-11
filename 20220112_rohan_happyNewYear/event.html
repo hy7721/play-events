@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>설날 이벤트</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/rohanEvent.css">
+
+  <!-- js -->
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/rohanEvent.js"></script>
+</head>
+<body>
+  <div id="rohanWrap">
+    <header class="r-header" id="rHeader">
+      <h1>
+        <a href="javascript:closeWin();" class="link-rohan"><img src="./images/img-logo.png" class="img-rohan" alt="ROHAN 로한"></a>
+      </h1>
+      <nav class="r-nav" id="rNav">
+        <h2><span class="sr-only">유틸리티 메뉴 영역</span></h2>
+        <a href="javascript:closeWin();" class="link-home"><span class="sr-only">홈 버튼</span></a>
+        <a href="javascript:closeWin2();" class="link-close"><span class="sr-only">닫기 버튼</span></a>
+      </nav>
+    </header>
+    <main class="r-main" id="rMain">
+      <h2><span class="sr-only">메인 이벤트 영역</span></h2>
+      <aside class="r-aside" id="rAside">
+        <a href="#rWrap" class="btn-top" onclick="scrollTop()"><span class="sr-only">페이지 맨 위로 이동 버튼</span></a>
+      </aside>
+      <section class="section-visual">
+        <div class="sr-only">
+          <h3>새해 복 많이 받으세요</h3>
+          <strong>로한 설 기념 이벤트</strong>
+          <p>2022년 01월 12일 점검 후 ~ 2022년 02월 16일 점검 전</p>
+          <p>본서버 전용 이벤트입니다. 시즌서버에서는 적용되지 않습니다.</p>
+        </div>
+        <div class="inner-visual">
+          <img src="./images/img-title.png" class="img-title" alt="">
+          <img src="./images/img-visual-bg-01.png" class="img-visual-bg-01" alt="">
+          <img src="./images/img-visual-bg-02.png" class="img-visual-bg-02" alt="">
+          <img src="./images/img-visual-bg-03.png" class="img-visual-bg-03" alt="">
+          <img src="./images/img-visual-bg-04.png" class="img-visual-bg-04" alt="">
+          <img src="./images/img-visual-bg-05.png" class="img-visual-bg-05" alt="">
+          <img src="./images/img-visual-bg-06.png" class="img-visual-bg-06" alt="">
+          <img src="./images/img-visual-bird-01.png" class="img-visual-bird-01" alt="">
+          <img src="./images/img-visual-bird-02.png" class="img-visual-bird-02" alt="">
+        </div>
+      </section>
+      <section class="section section-event-01">
+        <div class="sr-only">
+          <h4>EVENT 1. 떡국 재료 수집</h4>
+          <strong>이벤트 아이템 정보</strong>
+          <table>
+            <thead>
+              <tr>
+                <td>아이템명</td>
+                <td>아이템 설명</td>
+                <td>드랍범위</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>떡</td>
+                <td>떡국 재료입니다. 명절에 먹으면 더 맛있습니다.</td>
+                <td>로한대륙의 모든 몬스터</td>
+              </tr>
+              <tr>
+                <td>소고기</td>
+                <td>떡국 재료입니다. 명절에 먹으면 더 맛있습니다.</td>
+                <td>투신의 전당 몬스터</td>
+              </tr>
+            </tbody>
+          </table>
+          <strong>NPC 트렌드 퀘스트 정보</strong>
+          <table>
+            <thead>
+              <tr>
+                <td>퀘스트명</td>
+                <td>반복여부</td>
+                <td>대상</td>
+                <td>조건</td>
+                <td>보상</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>설날기념 유물상자 교환</td>
+                <td>가능</td>
+                <td rowspan="5">모든 캐릭터</td>
+                <td>소고기&#215;50</td>
+                <td>설날기념 유물상자&#215;1</td>
+              </tr>
+              <tr>
+                <td>천상의 물약 교환</td>
+                <td>가능</td>
+                <td>떡&#215;5</td>
+                <td>천상의 물약&#215;1</td>
+              </tr>
+              <tr>
+                <td>300% 성장의 주문서 교환</td>
+                <td>가능</td>
+                <td>떡&#215;10</td>
+                <td>300% 성장의 주문서(이벤트) - 2시간&#215;1</td>
+              </tr>
+              <tr>
+                <td>맛좋은 떡국 교환</td>
+                <td>가능</td>
+                <td>떡&#215;30</td>
+                <td>맛좋은 떡국&#215;5</td>
+              </tr>
+              <tr>
+                <td>장기 여행용 사료팩 교환</td>
+                <td>불가</td>
+                <td>떡&#215;100</td>
+                <td>장기 여행용 사료팩(15일)(캐시)&#215;1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="inner-section">
+          <img src="./images/img-event-0101.png" alt="" data-aos="fade-up" data-aos-duration="3000">
+          <img src="./images/img-event-0102.png" alt="" data-aos="fade-up" data-aos-duration="2000">
+          <img src="./images/img-visual-tiger.png" class="img-visual-tiger" alt="">
+        </div>
+      </section>
+      <section class="section section-event-02" data-aos="fade-up" data-aos-duration="2000">
+        <div class="sr-only">
+          <h4>EVENT 2. 설 기념 선물</h4>
+          <strong>명절 연휴 기간 동안 아이템몰에서 아래의 아이템을 0캐시에 구매하실 수 있습니다.</strong>
+          <table>
+            <thead>
+              <tr>
+                <td colspan="4">구성품</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>설빔 모자(남)&#215;1</td>
+                <td>설빔 한복(남)&#215;1</td>
+                <td rowspan="2">맛좋은 떡국&#215;20</td>
+                <td rowspan="2">에이션트 스킬 강화석(100%)(이벤트)&#215;2</td>
+              </tr>
+              <tr>
+                <td>설빔 모자(여)&#215;1</td>
+                <td>설빔 한복(여)&#215;1</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul>
+            <li>설 기념 선물은 계정당 1회에 한하여 구매하실 수 있습니다.</li>
+            <li>구매하신 상품은 [몰 인벤토리]에서 확인하실 수 있습니다.</li>
+            <li>빔 모자와 설빔 한복은 3소켓 코스튬입니다.</li>
+          </ul>
+        </div>
+        <div class="inner-section">
+          <img src="./images/img-event-02.png" class="img-event" alt="">
+        </div>
+      </section>
+      <section class="section section-event-03">
+        <div class="sr-only">
+          <h4>EVENT 3. 부가서비스 할인! 30% SALE</h4>
+          <strong>이벤트 기간 동안 캐릭터와 길드 관련 부가서비스를 30% 할인된 가격에 이용하세요!</strong>
+          <p>이벤트기간 : 2022.01.12 ~ 2022.02.16 점검 전</p>
+          <table>
+            <thead>
+              <tr>
+                <td>부가서비스 이름</td>
+                <td>기존가격</td>
+                <td>할인가격</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>캐릭터 서버이전 서비스</td>
+                <td>20,000원</td>
+                <td>14,000원</td>
+              </tr>
+              <tr>
+                <td>캐릭터 이전 서비스</td>
+                <td>10,000원</td>
+                <td>7,000원</td>
+              </tr>
+              <tr>
+                <td>캐릭터명 변경 서비스</td>
+                <td>25,000원</td>
+                <td>17,500원</td>
+              </tr>
+              <tr>
+                <td>캐릭터 성별변경 서비스</td>
+                <td>10,000원</td>
+                <td>7,000원</td>
+              </tr>
+              <tr>
+                <td>캐릭터 종족변경 서비스</td>
+                <td>38,000원</td>
+                <td>26,600원</td>
+              </tr>
+              <tr>
+                <td>경험치 복구 서비스</td>
+                <td>30,000원</td>
+                <td>21,000원</td>
+              </tr>
+              <tr>
+                <td>초월 스탯 변경 서비스(초월자 전용)</td>
+                <td>14,000원</td>
+                <td>9,800원</td>
+              </tr>
+              <tr>
+                <td>길드 생성 서비스</td>
+                <td>19,000원</td>
+                <td>13,300원</td>
+              </tr>
+              <tr>
+                <td>길드명 변경 서비스</td>
+                <td>48,000원</td>
+                <td>33,600원</td>
+              </tr>
+              <tr>
+                <td>길드마스터 위임 서비스</td>
+                <td>48,000원</td>
+                <td>33,600원</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="inner-section">
+          <img src="./images/img-event-03.png" class="img-event" alt="" data-aos="fade-up" data-aos-duration="1500">
+          <img src="./images/img-sale.png" class="img-sale" alt="">
+          <img src="./images/img-visual-bg-07.png" class="img-visual-bg-07" alt="" data-aos="fade-right" data-aos-duration="1500">
+          <a href="https://secure.rohan.co.kr/payment/append_01.html" class="btn-service" target="_blank" data-aos="fade-up" data-aos-duration="2000">
+            <span class="sr-only">부가서비스 이용하기</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="r-footer" id="rFooter">
+      <h2><span class="sr-only">이벤트 푸터 영역</span></h2>
+      <img src="./images/img-copyright.png" class="img-copyright" alt="&copy; PLAYWITH GAMES Inc. All Rights Reserved.">
+    </footer>
+  </div><!-- #rohanWrap -->
+</body></html>
